@@ -4,9 +4,6 @@ import LandingPage from  './pages/LandingPage/LandingPage'
 
 
 function App() {
-  var hello = "Hi Dev!"
-
-
   return (
   <div>
     <LandingPage></LandingPage>
