@@ -7,9 +7,7 @@ function LandingPage() {
 
 
     return(
-        <Grid>
-            <Header></Header>
-        </Grid>
+        <Header></Header>
     )
 }
 

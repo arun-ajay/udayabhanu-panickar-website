@@ -68,7 +68,7 @@ export default class Header extends Component {
             }
         })        
     return(
-        <Grid.Row columns = {3} style = {{border: "5px solid green"}}>
+        <Grid.Row color = {"yellow"} columns = {3}>
             <Grid.Column width = {4}/>
             <Grid.Column textAlign = {"center"} width  = {8}>
                 <Menu borderless compact inverted>
