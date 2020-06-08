@@ -50,7 +50,7 @@ export default class Header extends Component {
             if (info.type === "navigation"){
                return <Menu.Item
                         name = {info.value}
-                        color = {"orange"}
+                        color = {"blue"}
                         active = {this.state.activeItem === info.value}
                         onClick = {this.handleItemClick}>
                             {info.display}
@@ -68,21 +68,21 @@ export default class Header extends Component {
             }
         })        
     return(
-        <Grid.Row color = {"yellow"} columns = {3}>
+        <Grid.Row className = "headerComponentMainRow" columns = {3}>
             <Grid.Column width = {4}/>
             <Grid.Column textAlign = {"center"} width  = {8}>
                 <Menu borderless compact inverted>
                     {tabsArray}
                 </Menu>
             </Grid.Column>    
-            <Grid.Column textAlign = {"right"} verticalAlign = {"middle"} width = {4}>
+            <Grid.Column textAlign = {"right"} verticalAlign = {"middle"} width = {4} style = {{right: "10px"}}>
                     <Button.Group>
                         <Button animated = "fade" onClick = {this.handleLogInClick} compact color = {"google plus"}>
                             <Button.Content visible>
                                 <Icon name = {"google"}/> Google
                             </Button.Content>
                             <Button.Content hidden>
-                                <Icon name = {"sign-in"}/> Sign
+                                <Icon name = {"sign-in"}/> Sign In
                             </Button.Content>
                         </Button>
                         <Button animated = {"fade"} onClick = {this.handleLogInClick} compact  color = {"facebook"}>
@@ -90,7 +90,7 @@ export default class Header extends Component {
                                 <Icon name = {"facebook official"}/> Facebook
                             </Button.Content>
                             <Button.Content hidden>
-                                <Icon name = {"sign-in"}/> Sign
+                                <Icon name = {"sign-in"}/> Sign In
                             </Button.Content>
                         </Button>
                     </Button.Group>

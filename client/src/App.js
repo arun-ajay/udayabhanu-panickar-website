@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import LandingPage from  './pages/LandingPage/LandingPage'
-
+import LandingPage from  './pages/LandingPage/LandingPage';
+import {Grid,Container} from 'semantic-ui-react'
 
 function App() {
   return (
-  <div>
-    <LandingPage></LandingPage>
-  </div>
+      <LandingPage></LandingPage>
   );
 }
 
