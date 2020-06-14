@@ -1,7 +1,7 @@
 import React from 'react'
 import './LandingPage.css'
 import Header from '../../components/Header/Header'
-import {Grid,Card,Image,Transition} from 'semantic-ui-react'
+import {Grid,Card,Image,Button} from 'semantic-ui-react'
 
 function LandingPage() {
 
@@ -13,10 +13,10 @@ function LandingPage() {
     " ചരിത്രം നിർമ്മിക്കാൻ വേണ്ടി എഴുതിയ ചരിത്രത്തേക്കാൾ കൂടുതലായി, ചരിത്രവ്യക്തിത്വങ്ങളുടെ സ്വകാര്യ ലിഖിതങ്ങളിൽ തേടുന്നു."
 
     return(
-        <Grid stackable padded = {"vertically"} className = "landingPageGrid">
+        <Grid className = "landingPageGrid">
             <Header></Header>
             <Grid.Row className = "landingPageMainRow">
-                <Grid.Column verticalAlign = {"middle"} width = {16}>
+                <Grid.Column width = {4} className = "landingPageColumn">
                     <Card centered className = "landingPageCardContent">
                         <Image src= {require('./assets/Udayabhanu.jpg')} wrapped ui={false} />
                         <Card.Content>
@@ -31,7 +31,14 @@ function LandingPage() {
                     </Card>
                 </Grid.Column>
             </Grid.Row>
-        </Grid>
+            <Grid.Row className = "landingPageFooter">
+                <Grid.Column width = {16}>
+                    <Button compact>
+                        test
+                    </Button>
+                </Grid.Column>
+            </Grid.Row>
+    </Grid>
     )
 }
 

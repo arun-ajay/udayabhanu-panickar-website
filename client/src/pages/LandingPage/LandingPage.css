@@ -1,7 +1,17 @@
 .landingPageMainRow{
-    height: 92vh
+    height: 88vh;
+    border: 5px solid red;
 }
 
+.landingPageFooter{
+    height: 4vh;
+    border: 5px solid purple;
+    font-weight: bolder;
+    color: yellow;
+}
+
+.landingPageColumn{
+}
 
 .landingPageGrid{
     height: 100vh;
@@ -13,4 +23,5 @@
 
 
 .landingPageCardContent{
+    min-width: 400px;
 }
