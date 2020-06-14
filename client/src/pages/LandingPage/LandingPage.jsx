@@ -13,7 +13,7 @@ function LandingPage() {
     " ചരിത്രം നിർമ്മിക്കാൻ വേണ്ടി എഴുതിയ ചരിത്രത്തേക്കാൾ കൂടുതലായി, ചരിത്രവ്യക്തിത്വങ്ങളുടെ സ്വകാര്യ ലിഖിതങ്ങളിൽ തേടുന്നു."
 
     return(
-        <Grid className = "landingPageGrid">
+        <Grid padded = {"vertically"} className = "landingPageGrid">
             <Header></Header>
             <Grid.Row className = "landingPageMainRow">
                 <Grid.Column width = {4} className = "landingPageColumn">
@@ -33,9 +33,6 @@ function LandingPage() {
             </Grid.Row>
             <Grid.Row className = "landingPageFooter">
                 <Grid.Column width = {16}>
-                    <Button compact>
-                        test
-                    </Button>
                 </Grid.Column>
             </Grid.Row>
     </Grid>

@@ -21,6 +21,11 @@
     background-position: center center;
 }
 
+.ui.grid.landingPageGrid{
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
 
 .landingPageCardContent{
     min-width: 400px;
