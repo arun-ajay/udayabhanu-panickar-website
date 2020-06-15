@@ -1,7 +1,8 @@
 import React from 'react'
 import './LandingPage.css'
 import Header from '../../components/Header/Header'
-import {Grid,Card,Image,Button} from 'semantic-ui-react'
+import Footer from '../../components/Footer/Footer'
+import {Grid,Card,Image,Label} from 'semantic-ui-react'
 
 function LandingPage() {
 
@@ -16,14 +17,15 @@ function LandingPage() {
         <Grid padded = {"vertically"} className = "landingPageGrid">
             <Header></Header>
             <Grid.Row className = "landingPageMainRow">
-                <Grid.Column width = {4} className = "landingPageColumn">
-                    <Card centered className = "landingPageCardContent">
+                <Grid.Column verticalAlign = {"middle"} width = {4}>
+                    <Card centered className = "landingPageCard">
                         <Image src= {require('./assets/Udayabhanu.jpg')} wrapped ui={false} />
                         <Card.Content>
                             <Card.Header textAlign = {"center"}>Udayabhanu Panickar</Card.Header>
                             <Card.Meta textAlign = {"center"}>Author</Card.Meta>
-                            <Card.Description >
+                            <Card.Description textAlign = {"center"}>
                                 {englishDescription}
+                            <br></br>
                             <br></br>
                                 {malayalamDescription}
                             </Card.Description>
@@ -31,10 +33,7 @@ function LandingPage() {
                     </Card>
                 </Grid.Column>
             </Grid.Row>
-            <Grid.Row className = "landingPageFooter">
-                <Grid.Column width = {16}>
-                </Grid.Column>
-            </Grid.Row>
+            <Footer></Footer>
     </Grid>
     )
 }

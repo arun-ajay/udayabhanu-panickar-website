@@ -1,18 +1,4 @@
-.landingPageMainRow{
-    height: 88vh;
-    border: 5px solid red;
-}
-
-.landingPageFooter{
-    height: 4vh;
-    border: 5px solid purple;
-    font-weight: bolder;
-    color: yellow;
-}
-
-.landingPageColumn{
-}
-
+/* GRID CSS*/
 .landingPageGrid{
     height: 100vh;
     background-image: url("./assets/background.jpg");
@@ -21,12 +7,35 @@
     background-position: center center;
 }
 
-.ui.grid.landingPageGrid{
+.ui.grid{
     margin-left: 0rem;
     margin-right: 0rem;
 }
 
 
-.landingPageCardContent{
-    min-width: 400px;
+/**/
+
+/*Main page content*/
+.landingPageMainRow{
+    height: 88vh;
 }
+
+.row{
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+
+
+.landingPageCard{
+    min-width: 425px;
+}
+
+
+/**/
+
+
+
+
+
+
+

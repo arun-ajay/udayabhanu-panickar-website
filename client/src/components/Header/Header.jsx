@@ -70,14 +70,14 @@ export default class Header extends Component {
     return(
         <Grid.Row className = "headerComponentMainRow" columns = {3}>
             <Grid.Column width = {4}/>
-            <Grid.Column textAlign = {"center"} width  = {8}>
+            <Grid.Column textAlign = {"center"} verticalAlign = {"middle"} width  = {8}>
                 <Menu borderless compact inverted>
                     {tabsArray}
                 </Menu>
             </Grid.Column>    
             <Grid.Column textAlign = {"right"} verticalAlign = {"middle"} width = {4} style = {{right: "10px"}}>
                     <Button.Group>
-                        <Button animated = "fade" onClick = {this.handleLogInClick} compact color = {"google plus"}>
+                        <Button animated = "fade" onClick = {this.handleLogInClick}  color = {"google plus"}>
                             <Button.Content visible>
                                 <Icon name = {"google"}/> Google
                             </Button.Content>
@@ -85,7 +85,7 @@ export default class Header extends Component {
                                 <Icon name = {"sign-in"}/> Sign In
                             </Button.Content>
                         </Button>
-                        <Button animated = {"fade"} onClick = {this.handleLogInClick} compact  color = {"facebook"}>
+                        <Button animated = {"fade"} onClick = {this.handleLogInClick}   color = {"facebook"}>
                             <Button.Content visible>
                                 <Icon name = {"facebook official"}/> Facebook
                             </Button.Content>
