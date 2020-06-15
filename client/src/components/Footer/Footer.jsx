@@ -17,7 +17,7 @@ export default class Footer extends Component {
     return(
         <Grid.Row className = "footerComponentMainRow">
             <Grid.Column width = {16} textAlign = {"center"} verticalAlign = {"middle"}>
-                <Label circular onClick = {this.handleFooterLabelClick} as = 'a' color = {"black"}>
+                <Label size = {"large"} circular onClick = {this.handleFooterLabelClick} as = 'a' color = {"black"}>
                     <Icon name = {"github alternate"}/>
                     Arun Ajay
                 </Label>
