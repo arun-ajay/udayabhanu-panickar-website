@@ -1,10 +1,8 @@
 /* GRID CSS*/
 .landingPageGrid{
-    height: 100vh;
-    background-image: url("./assets/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    overflow: auto;
+    height: 100%;
+
 }
 
 .ui.grid{
@@ -17,7 +15,11 @@
 
 /*Main page content*/
 .landingPageMainRow{
-    height: 88vh;
+    height: 90%;
+    width: 100%;
+    padding-top: 5px;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .row{
@@ -25,17 +27,8 @@
     padding-bottom: 0rem !important;
 }
 
-
 .landingPageCard{
     min-width: 425px;
 }
 
-
 /**/
-
-
-
-
-
-
-

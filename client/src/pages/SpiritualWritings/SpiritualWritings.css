@@ -1,0 +1,36 @@
+/* GRID CSS*/
+.spiritualPageGrid{
+    overflow: auto;
+    height: 100%;
+}
+
+.ui.grid{
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
+
+/**/
+
+/*Main page content*/
+.spiritualPageMainRow{
+    height: 90%;
+    width: 100%;
+    padding-top: 5px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.row{
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+
+
+
+.ui.cards{
+    margin-top: 0rem;
+}
+
+/**/
+

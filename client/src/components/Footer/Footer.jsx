@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './Footer.css';
-import  {Grid,Label,Icon} from 'semantic-ui-react';
+import  {Grid,Label,Button} from 'semantic-ui-react';
 
 
 
@@ -15,12 +15,19 @@ export default class Footer extends Component {
     render() {
 
     return(
-        <Grid.Row className = "footerComponentMainRow">
+        <Grid.Row columns = {1} className = "footerComponentMainRow">
             <Grid.Column width = {16} textAlign = {"center"} verticalAlign = {"middle"}>
-                <Label size = {"large"} circular onClick = {this.handleFooterLabelClick} as = 'a' color = {"black"}>
-                    <Icon name = {"github alternate"}/>
-                    Arun Ajay
-                </Label>
+                <Button  labelPosition= {"left"} onClick = {this.handleFooterLabelClick}>
+                    <Label circular  icon = {"github"} color = {"black"}/>
+                    <Button compact circular animated = {"vertical"} color = {"black"}>
+                        <Button.Content visible>
+                            Arun Ajay
+                        </Button.Content>
+                        <Button.Content hidden>
+                            Site Creator
+                        </Button.Content>
+                    </Button>
+                </Button>
             </Grid.Column>
         </Grid.Row>
 

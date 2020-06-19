@@ -1,35 +1,39 @@
 import React,{Component} from 'react';
-import './Header.css';
+import './SiteHeader.css';
 import  {Grid,Button} from 'semantic-ui-react';
 import {Icon,Menu} from 'semantic-ui-react';
+import {Link} from 'react-router-dom'
 
 
 
-export default class Header extends Component {
+export default class SiteHeader extends Component {
     state = {
         data : [
             {
-                type: "header",
+                type: "SiteHeader",
                 value: "Guest",
                 display: "Guest",
             },
             {
                 type: "navigation",
                 value: "Home",
-                display: <Icon name = {"home"}/>
+                display: <Icon name = {"home"}/>,
+                link: "/"
             },
             {
                 type: "navigation",
                 value:"Spiritual Writings",
-                display: "Spiritual Writings"
+                display: "Spiritual Writings",
+                link: "/spiritualwritings"
             },
             {
                 type: "navigation",
                 value:"Historical Writings",
-                display: "Historical Writings"
+                display: "Historical Writings",
+                link: "/historicalwritings"
             }
             ],
-        activeItem: "Home"
+        activeItem: window.location.pathname
     }
 
     handleItemClick = (e,{name}) => {
@@ -45,37 +49,34 @@ export default class Header extends Component {
 
 
     render() {
-
         var tabsArray = this.state.data.map((info,index) => {
             if (info.type === "navigation"){
                return <Menu.Item
-                        name = {info.value}
-                        color = {"blue"}
-                        active = {this.state.activeItem === info.value}
-                        onClick = {this.handleItemClick}>
-                            {info.display}
-                        </Menu.Item>
+                    as = {Link}
+                    to = {info.link}
+                    name = {info.value}
+                    color = {"blue"}
+                    active = {this.state.activeItem === info.link}
+                    onClick = {this.handleItemClick}>
+                        {info.display}
+                    </Menu.Item>
+
             }
-            else if (info.type === "header"){
-                return <Menu.Item header>
+            else if (info.type === "SiteHeader"){
+                return <Menu.Item SiteHeader>
                             {info.value}
                         </Menu.Item>
             }
-            else if (info.type === "signin"){
-                return <Menu.Item
-                        name = {info.value}
-                        onclick = {this.handleLogInClick}/>
-            }
         })        
     return(
-        <Grid.Row className = "headerComponentMainRow" columns = {3}>
-            <Grid.Column width = {4}/>
-            <Grid.Column textAlign = {"center"} verticalAlign = {"middle"} width  = {8}>
-                <Menu borderless compact inverted>
+        <Grid.Row columns = {3} className = "siteHeader">
+            <Grid.Column computer = {4} tablet = {16} mobile = {16}/>
+            <Grid.Column textAlign = {"center"} verticalAlign = {"middle"} computer  = {8} tablet = {16} mobile = {16}>
+                <Menu stackable borderless compact inverted>
                     {tabsArray}
                 </Menu>
             </Grid.Column>    
-            <Grid.Column textAlign = {"right"} verticalAlign = {"middle"} width = {4} style = {{right: "10px"}}>
+            <Grid.Column textAlign = {"center"} verticalAlign = {"middle"} computer = {4} tablet = {16} mobile = {16} style = {{right: "10px"}}>
                     <Button.Group>
                         <Button animated = "fade" onClick = {this.handleLogInClick}  color = {"google plus"}>
                             <Button.Content visible>

@@ -1,7 +1,8 @@
 /* GRID CSS*/
-.historicalPageGrid{
-    overflow: auto;
-    height: 100%
+.writingPageGrid{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .ui.grid{
@@ -13,9 +14,8 @@
 /**/
 
 /*Main page content*/
-.historicalPageMainRow{
-    height: 90%;
-    width: 100%;
+.writingPageMainRow{
+    height: 90vh;
 }
 
 .row{
@@ -24,7 +24,7 @@
 }
 
 
-.historicalPageCard{
+.writingPageCard{
     min-width: 425px;
 }
 
