@@ -11,7 +11,8 @@ export default class SpiritualWritings extends Component{
 
     state = {
         open : false,
-        redirect: false,
+        redirectWriting: false,
+        redirectSubmitter: false,
         data: null
     }
 
@@ -24,10 +25,18 @@ export default class SpiritualWritings extends Component{
 
     redirectToWriting = (data) => {
         this.setState({
-            redirect: true,
+            redirectWriting: true,
             data: data
         })
     }
+
+    redirectToSubmitter = () =>{
+        this.setState({
+            redirectSubmitter:true
+        })
+    }
+
+
     render () {
         var articles = Array(15).fill({
             header: "Article",
@@ -62,7 +71,7 @@ export default class SpiritualWritings extends Component{
 
         if (auth){
             cardArray.unshift(
-                <Card link color = {"green"}>
+                <Card link color = {"green"} onClick = {() => this.redirectToSubmitter()}>
                     <Card.Content textAlign = {"center"}>
                         <Card.Header >
                             Submit a New Writing
@@ -78,10 +87,20 @@ export default class SpiritualWritings extends Component{
             )
         }
 
-        if (this.state.redirect){
+        if (this.state.redirectWriting){
             return <Redirect to={{
                 pathname: "/spiritualwritings/writing",
                 state: this.state.data
+            }}
+            />
+        }
+
+        if (this.state.redirectSubmitter){
+            return <Redirect to={{
+                pathname: "/spiritualwritings/submitter",
+                state: {
+                    type: "spiritual"
+                }
             }}
             />
         }

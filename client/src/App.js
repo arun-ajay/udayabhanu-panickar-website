@@ -4,6 +4,7 @@ import LandingPage from  './pages/LandingPage/LandingPage';
 import SpiritualWritings from './pages/SpiritualWritings/SpiritualWritings';
 import HistoricalWritings from './pages/HistoricalWritings/HistoricalWritings';
 import Writing from './pages/Writing/Writing';
+import Submitter from './pages/Submitter/Submitter';
 import {Route,Router} from 'react-router-dom'
 import history from './history';
 
@@ -16,6 +17,8 @@ function App() {
         <Route path = "/historicalwritings" component = {HistoricalWritings} />
         <Route path = "/spiritualwritings/writing" component = {Writing} exact/>
         <Route path = "/historicalwritings/writing" component = {Writing} exact/>
+        <Route path = "/spiritualwritings/submitter" component = {Submitter} exact/>
+        <Route path = "/historicalwritings/submitter" component = {Submitter} exact/>
       </Router>
     </div>
   );
