@@ -77,8 +77,8 @@ export default class SiteHeader extends Component {
                 </Menu>
             </Grid.Column>    
             <Grid.Column textAlign = {"center"} verticalAlign = {"middle"} computer = {4} tablet = {16} mobile = {16} style = {{right: "10px"}}>
-                    <Button.Group>
-                        <Button animated = "fade" onClick = {this.handleLogInClick}  color = {"google plus"}>
+                    <Button.Group compact>
+                        <Button animated = "fade" onClick = {this.handleLogInClick} color = {"google plus"}>
                             <Button.Content visible>
                                 <Icon name = {"google"}/> Google
                             </Button.Content>

@@ -14,7 +14,7 @@ function App() {
         <Route path = "/" component = {LandingPage} exact/>
         <Route path = "/spiritualwritings" component = {SpiritualWritings} exact/>
         <Route path = "/historicalwritings" component = {HistoricalWritings} />
-        <Route path = "/writing" component = {Writing} exact/>
+        <Route path = "/spiritualwritings/writing" component = {Writing} exact/>
         <Route path = "/historicalwritings/writing" component = {Writing} exact/>
       </Router>
     </div>

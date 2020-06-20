@@ -27,10 +27,31 @@ export default class  LandingPage extends Component {
 
     
         return(
-            <Grid padded = {"vertically"} className = "landingPageGrid">
+            <Grid stackable padded = {"vertically"} className = "landingPageGrid">
                 <SiteHeader></SiteHeader>
                 <Grid.Row className = "landingPageMainRow">
-                    <Grid.Column verticalAlign = {"middle"} width = {4}>
+                    <Grid.Column verticalAlign = {"middle"} width = {4} only = {"computer"}>
+                        <Transition
+                            animation = "fade right"
+                            duration = {1000}
+                            visible = {this.state.open}
+                        >
+                            <Card centered className = "landingPageCard">
+                                <Image src= {require('./assets/Udayabhanu.jpg')} wrapped ui={false} />
+                                <Card.Content>
+                                    <Card.Header textAlign = {"center"}>Udayabhanu Panickar</Card.Header>
+                                    <Card.Meta textAlign = {"center"}>Author</Card.Meta>
+                                    <Card.Description textAlign = {"center"}>
+                                        {this.state.englishDescription}
+                                    <br></br>
+                                    <br></br>
+                                        {this.state.malayalamDescription}
+                                    </Card.Description>
+                                </Card.Content>
+                            </Card>
+                        </Transition>
+                    </Grid.Column>
+                    <Grid.Column verticalAlign = {"middle"} width = {16} only = {"tablet mobile"}>
                         <Transition
                             animation = "fade right"
                             duration = {1000}

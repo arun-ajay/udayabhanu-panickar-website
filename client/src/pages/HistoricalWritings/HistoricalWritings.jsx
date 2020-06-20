@@ -11,7 +11,7 @@ function HistoricalWritings(){
 
 
     return(
-        <Grid padded = {"vertically"} className = "historicalPageGrid">
+        <Grid stackable padded = {"vertically"} className = "historicalPageGrid">
             <SiteHeader></SiteHeader>
             <Grid.Row className = "historicalPageMainRow">
             </Grid.Row>

@@ -38,10 +38,10 @@ export default class SpiritualWritings extends Component{
 
         var auth = true;
     
-        var cardArray = articles.map((data,index) => (
-            <Transition
+        var cardArray = articles.map((data,index) => {
+           return  <Transition
                 animation = "vertical flip"
-                duration = {500+index*100}
+                duration = {500+(index)*100}
                 visible = {this.state.open}
             >
                 <Card link color = {"blue"} onClick = {() => this.redirectToWriting(data)}>
@@ -58,7 +58,7 @@ export default class SpiritualWritings extends Component{
                     </Card.Content>
                 </Card>
             </Transition>
-        ))
+        })
 
         if (auth){
             cardArray.unshift(
@@ -80,7 +80,7 @@ export default class SpiritualWritings extends Component{
 
         if (this.state.redirect){
             return <Redirect to={{
-                pathname: "/writing",
+                pathname: "/spiritualwritings/writing",
                 state: this.state.data
             }}
             />
