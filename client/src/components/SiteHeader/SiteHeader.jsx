@@ -76,7 +76,7 @@ export default class SiteHeader extends Component {
                     {tabsArray}
                 </Menu>
             </Grid.Column>    
-            <Grid.Column textAlign = {"center"} verticalAlign = {"middle"} computer = {4} tablet = {16} mobile = {16} style = {{right: "10px"}}>
+            <Grid.Column textAlign = {"right"} verticalAlign = {"middle"} only  = {"computer"} computer = {4} style = {{right: "10px"}}>
                     <Button.Group compact>
                         <Button animated = "fade" onClick = {this.handleLogInClick} color = {"google plus"}>
                             <Button.Content visible>
@@ -95,7 +95,27 @@ export default class SiteHeader extends Component {
                             </Button.Content>
                         </Button>
                     </Button.Group>
-            </Grid.Column>        
+            </Grid.Column>     
+            <Grid.Column textAlign = {"center"} verticalAlign = {"middle"} only = {"tablet mobile"} tablet = {16} mobile = {16} style = {{right: "10px"}}>
+                    <Button.Group compact>
+                        <Button animated = "fade" onClick = {this.handleLogInClick} color = {"google plus"}>
+                            <Button.Content visible>
+                                <Icon name = {"google"}/> Google
+                            </Button.Content>
+                            <Button.Content hidden>
+                                <Icon name = {"sign-in"}/> Sign In
+                            </Button.Content>
+                        </Button>
+                        <Button animated = {"fade"} onClick = {this.handleLogInClick}   color = {"facebook"}>
+                            <Button.Content visible>
+                                <Icon name = {"facebook official"}/> Facebook
+                            </Button.Content>
+                            <Button.Content hidden>
+                                <Icon name = {"sign-in"}/> Sign In
+                            </Button.Content>
+                        </Button>
+                    </Button.Group>
+            </Grid.Column>     
         </Grid.Row> 
 
     );
